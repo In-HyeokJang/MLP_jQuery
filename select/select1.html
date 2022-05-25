@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang='ko'>
+<head>
+<meta charset='UTF-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+<title></title>
+<style></style>
+<script src='https://code.jquery.com/jquery-3.5.0.js'></script>
+<script>
+$(function () {
+    //$('.first strong').css('color','red'); // 첫번째 strong의 color 를 찾아서 red로 변경해라
+    // $('li *').css('color','red'); //strong, em, span 만 바뀜
+    // $('#first, #third').css("color","red");//first, third 전체 style을 red로 바꿈
+    // $('li > strong').css("color","red"); // li바로 밑에 있는 strong만 red로 바뀜
+    // $('li  strong').css("color","red"); // 빈칸이 있으면 li의 자손들 다 잡힘
+    // $('#second + li').css("color","red"); // #second +li는 형제 (근처에 있는 li를 찾음) 그래서 red로 바꿈
+    // $('li:first-child').css("color","red"); // li의 첫번째 꺼만 찾고 red로 변경
+    // $('li:first').css("color","red");// li의 첫번째 꺼만 찾고 red로 변경
+
+});
+</script>
+</head>
+<body>
+    <!-- ul>(li>strong{텍스트})*4 teb키 눌러주기 -->
+<ul>
+    <li id="first"><strong>텍스트</strong>텍스트 텍스트 텍스트 텍스트</li>
+    <li id="second"><em>텍스트</em>텍스트 텍스트 텍스트 텍스트</li>
+    <li id="third"><span><strong>텍스트</strong></span>텍스트 텍스트 텍스트 텍스트</li>
+    <li id="fourth">텍스트 텍스트 텍스트 텍스트 텍스트</li>
+</ul>
+</body>
+</html>

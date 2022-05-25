@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang='ko'>
+<head>
+<meta charset='UTF-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+<title></title>
+<style></style>
+<script src='https://code.jquery.com/jquery-3.5.0.js'></script>
+<script>
+$(function () {
+        // $(":not(selector)") : 주어진 selector에 매치되지 않는 모든 요소를 선택한다.
+        $('input:not(:checked) + span').css("background-color","yellow");
+        $('input').attr('disabled','checked'); // disabled는 작동을 못하게 막는 속성
+
+});
+</script>
+</head>
+<body>
+<div><input type="checkbox" name="a"><span>Mary</span></div>
+<div><input type="checkbox" name="b"><span>Icm</span></div>
+<div><input type="checkbox" name="c" checked><span>Peter</span></div>
+</body>
+</html>

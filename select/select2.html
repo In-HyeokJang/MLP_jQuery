@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang='ko'>
+<head>
+<meta charset='UTF-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+<title></title>
+<style></style>
+<script src='https://code.jquery.com/jquery-3.5.0.js'></script>
+<script>
+$(function () {
+     $('#prev ~ div').css('border','3px groove blue'); // id가 prev의 형제중에 div인 것들을 다 css 적용하겠다
+});
+</script>
+<style>
+    /* div의 모든 span */
+    div, span{ 
+        display: block;
+        width: 80px;
+        height: 80px;
+        margin : 5px;
+        background-color: #bfa;
+        float: left;
+        font-size: 14px;
+    }
+    div#small {
+        width: 60px;
+        height: 25px;
+        font-size: small;
+        background-color: #fab;
+    }
+</style>
+</head>
+<body>
+<div>div (doesn't match since before #prev)</div>
+<span id="prev">span#prev</span>
+<div>div sibling</div>
+<div>div sibling
+    <div id="small">div nice</div>
+</div>
+<span>span sibling (not div)</span>
+<div>div sibling</div>
+</body>
+</html>

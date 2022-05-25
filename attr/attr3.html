@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang='ko'>
+<head>
+<meta charset='UTF-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+<title></title>
+<style></style>
+<script src='https://code.jquery.com/jquery-3.5.0.js'></script>
+<script>
+$(function () {
+    // [attribut^='value'] : 특정 속성이 지정한 값으로 시작되는 태그
+    $("[title ^='f']").css('color','red'); // ^기호는 앞에서 부터 시작 함
+    $("input[name $='letter']").val("a letter"); // $는 뒤에서 부터 봄 그래서 뒤에 letter의 값이 있는걸 val로 해서 a letter로 변경해줌
+    $("input[name *= 'man']").val('has man in it!'); // *는 특정 속성이 지정한 값을 포함하고 있는 태그 그래서 man이 있는 name을 val해서 has man in it!을 넣어줌
+    $("input[name~='man']").val('mr.man is in it!'); // ~기호는 빈공간이 있는거
+    $("input[name|= 'man']").val('man-news find'); // |기호는 하이픈(-)가 있는거
+});
+</script>
+</head>
+<body>
+<ul>
+    <li title="fist">텍스트 텍스트 텍스트 텍스트 텍스트</li>
+    <li title="second">텍스트 텍스트 텍스트 텍스트 텍스트</li>
+    <li title="third">텍스트 텍스트 텍스트 텍스트 텍스트</li>
+    <li title="fourth">텍스트 텍스트 텍스트 텍스트 텍스트</li>
+
+    <input type="text" name="newsletter">
+    <input type="text" name="milkman">
+    <input type="text" name="jobletter">
+    <br><br>
+
+    <input type="text" name="man-news">
+    <input type="text" name="milk man">
+    <input type="text" name="letterman2">
+    <input type="text" name="newmilk">
+
+</ul>
+</body>
+</html>

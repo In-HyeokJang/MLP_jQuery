@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang='ko'>
+<head>
+<meta charset='UTF-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+<title></title>
+<style></style>
+<script src='https://code.jquery.com/jquery-3.5.0.js'></script>
+<script>
+$(function () {
+    $("body").find('div').eq(2).addClass('blue'); // eq(2) 는 3번째 꺼
+    $('body').find('div').slice(0, 2).css('background-color','yellow'); // slice(0,2) 는 0,1 까지만 찾음
+    $("body").find('div').slice(3).css('background-color','orange'); // slice(3)은 0,1,2빼고 3부터 시작해서 끝까지 이다.
+
+});
+</script>
+<style>
+    div {
+        width: 60px;
+        height: 60px;
+        margin: 10px;
+        float: left;
+        border: 2px solid blue;
+    }
+    .blue{
+        background: blue;
+    }
+</style>
+</head>
+<body>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang='ko'>
+<head>
+<meta charset='UTF-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+<title></title>
+<style>
+    p{
+        color: red;
+        margin: 5px;
+        cursor: pointer;
+        background-color: #dad;
+        font-weight: bold;
+        font-size: 16px;
+    }
+    p:hover{
+        background-color: yellow;
+    }
+</style>
+<script src='https://code.jquery.com/jquery-3.5.0.js'></script>
+<script>
+$(function () {
+    $('p').click(function(){
+        $(this).slideUp();
+    });
+
+    $('button').click(function(){
+        $('p').toggle('slow');
+    });
+});
+</script>
+</head>
+<body>
+<button>Toggle 'em</button>
+<p>Fisrt Paragraph</p>
+<p>Second Paragraph</p>
+<p>Yet one more Paragraph</p>
+</body>
+</html>
